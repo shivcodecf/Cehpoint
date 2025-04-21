@@ -11,7 +11,23 @@ This is the **backend** of the AI-Powered Portfolio Generator. It is built with 
 - Google Gemini API (for HTML generation)
 - CORS, dotenv, body-parser (middleware)
 
----
+--- 
+
+
+
+## 🔄 POST `/generate`
+
+
+
+### 📬 Request
+
+**Method:** `POST`  
+**Endpoint:** `/generate`  
+**Content-Type:** `application/json`
+
+
+
+
 
 ## 📦 Getting Started
 
