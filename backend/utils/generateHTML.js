@@ -1,52 +1,89 @@
 const generateHTML = ({ name, skills, experience, profileImage, projects }) => {
-    return `
-  You are a portfolio website generator. Create a modern, responsive, and professional HTML + CSS portfolio page using the following data:
-  
-  Name: ${name}
-  Profile Image: ${profileImage}
-  Skills: ${skills}
-  Experience: ${experience}
-  Projects: ${projects}
-  
-  Requirements:
-  
-  - looks like professional portfolio.
-- There should no overflow on x-axis.
-- The must not any unwanted text
-- The heading must in bold and must be in center.
-- The image must be on center.
-- The User name must On left side of Navbar
-- The skills must be displayed with respective icons.
-- Add cool Contact section also
-- The page must fully responsive
-- there  should not any margin and padding
-- No margin from top 
-- The Projects Cards should be shadow
-- The portfolio should use the full screen width (no max-width or centered container).
-- Use visually pleasing background colors for different sections to create contrast.
-- Each section (Header, About, Skills, Projects, Footer) should be well-spaced and styled.
-- Use a clean, readable, professional font (like 'Inter', 'Open Sans', or 'Roboto').
-- Display the profile image in the center, circular, and styled properly.
-- In Contact Section the user input Name , Email and Message.
-- On Clicking Submit Button in Contact Section the message "Contact You soon"  displayed
-- Use proper background color in each section.
-- The each elemets loooks good.
-- proper color should be there.
-- Looks neat and clean.
-- Use inline CSS or include <style> inside the <head>.
-- Use clean and readable fonts.
-- Use responsive layout.
-- Show profile image at the mid horizontally.
+  return `
+You are a portfolio website generator.
 
-- Display each project with title and description.
-- Add a modern header with name and section titles.
-- Do not include script tags or JavaScript.
-- Display Projects section in the form of card
-- Display skills section with icon.
-- the portfoilio takes whole screen width.
-- Only return the complete HTML including <html>, <head>, and <body>.
+Generate a **fully responsive**, **modern**, and **professional** portfolio website using **pure HTML, CSS (inside a <style> tag)**, and **JavaScript (inside a <script> tag)**.
+
+Use the following user data:
+- Name: ${name}
+- Profile Image URL: ${profileImage}
+- Skills: ${skills} (each with an icon using Font Awesome)
+- Experience: ${experience}
+- Projects: ${projects} (each with a title and description)
+
+Your output must be a **complete HTML document** that includes:
+- <html>, <head>, and <body> tags
+- All CSS inside a single <style> tag in <head>
+- All JavaScript inside a <script> tag at the end of <body>
+
+Strict requirements:
+
+---
+
+### 🧩 Layout & Design
+
+- Use full screen width (no max-width or container).
+- The heading must be bold
+- Must have no overflow on the x-axis.
+- No default margin/padding (unless added in CSS).
+- Use a clean, professional font like 'Inter', 'Roboto', or 'Open Sans'.
+- Visually distinct background color for each section (Hero, About, Skills, Projects, Contact, Footer).
+- Use good spacing and styling between sections.
+- Portfolio must be clean, modern, and visually pleasing.
+- The whole website must responsive.
+
+---
+
+### 🔥 Functional Features (Use JavaScript)
+
+
+- Smooth scroll when clicking navbar links.
+- Highlight **active navbar link** when scrolling.
+- Contact form should show an alert "Contact you soon!" when submit is clicked.
+
+---
+
+### 🧱 Structure to Include
+
+1. **Navbar**
+   - Left side: user name
+   - Right side: Links to About, Skills, Projects, Contact
+   - Smooth scrolling and active link highlighting
+
+2. **Hero/About Section**
+   - Centered circular profile image
+   - Image must be centered horizontally
+   - Bold, centered user name and experience text
+
+3. **Skills Section**
+   - Responsive flex or grid layout
+   - Display each skill with a Font Awesome icon
+
+4. **Projects Section**
+   - Display each project in a card with shadow
+   - Title and description for each
+
+5. **Contact Section**
+   - Input fields: Name, Email, Message
+   - Submit button shows alert
+   - On clicking submit shows alert "submitted successfully" hit
+   - On clicking submit the page must not refresh
+
+6. **Footer**
+   - Simple and clean footer with background color
+
+---
+
+### 🧠 Additional Notes
+
+- No unnecessary text, code, or comments.
+- No external files – include everything inline.
+- No max-width containers – use full screen width.
+- Do not use frameworks like Bootstrap or Tailwind.
+- Output should be valid and clean HTML, CSS, and JavaScript.
+
+Only return the complete HTML output.
   `;
-  };
-  
-  export default generateHTML;
-  
+};
+
+export default generateHTML;
