@@ -21,7 +21,7 @@ This is the **frontend** of the AI-Powered Portfolio Generator built with **Vite
 
 ```bash
 git clone https://github.com/shivcodecf/Cehpoint.git
-cd ai-portfolio-generator/frontend
+cd Cehpoint/frontend
 
 
 📥 Install Dependencies 

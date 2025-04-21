@@ -35,7 +35,7 @@ This is the **backend** of the AI-Powered Portfolio Generator. It is built with 
 
 ```bash
 git clone https://github.com/shivcodecf/Cehpoint.git
-cd ai-portfolio-generator/backend
+cd Cehpoint/backend
 
 
 📥 Install Dependencies
