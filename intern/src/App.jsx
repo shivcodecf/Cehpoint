@@ -45,15 +45,20 @@ const PortfolioBuilder = () => {
     setLoading(true);
     setHide(true);
     try {
-      const response = await fetch("http://localhost:5000/api/portfolio/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/portfolio/generate",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
-      setHtmlContent(data.htmlContent || "<p>Failed to generate portfolio.</p>");
+      setHtmlContent(
+        data.htmlContent || "<p>Failed to generate portfolio.</p>"
+      );
     } catch (err) {
       console.error("Error generating portfolio:", err);
     } finally {
@@ -83,7 +88,7 @@ const PortfolioBuilder = () => {
             <input
               type="text"
               name="profileImage"
-              placeholder="Image URL"
+              placeholder="Your Image URL"
               className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 ${
                 errors.profileImage ? "border-red-500" : "border-gray-300"
               }`}

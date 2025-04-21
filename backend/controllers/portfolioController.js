@@ -5,7 +5,13 @@ import fetch from "node-fetch";
 export const generatePortfolio = async (req, res) => {
   const { name, skills, experience, profileImage, projects } = req.body;
 
-  const prompt = generateHTML({ name, skills, experience, profileImage, projects });
+  const prompt = generateHTML({
+    name,
+    skills,
+    experience,
+    profileImage,
+    projects,
+  });
 
   try {
     const geminiRes = await fetch(
