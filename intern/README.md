@@ -20,7 +20,7 @@ This is the **frontend** of the AI-Powered Portfolio Generator built with **Vite
 ### 🔁 Clone the Repository  
 
 ```bash
-git clone https://github.com/your-username/ai-portfolio-generator.git
+git clone https://github.com/shivcodecf/Cehpoint.git
 cd ai-portfolio-generator/frontend
 
 
