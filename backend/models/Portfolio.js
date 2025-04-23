@@ -14,9 +14,13 @@ import mongoose from "mongoose";
 const portfolioSchema = new mongoose.Schema({
   name: String,
   skills: String,
+  github:String,
+  linkedin:String,
+  coding:String,
   experience: String,
   profileImage: String,
   projects: String,
+  achievements: String,
   htmlContent: String,
 });
 

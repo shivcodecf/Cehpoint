@@ -3,7 +3,7 @@ import generateHTML from "../utils/generateHTML.js";
 import fetch from "node-fetch";
 
 export const generatePortfolio = async (req, res) => {
-  const { name, skills, experience, profileImage, projects } = req.body;
+  const { name, skills, experience, profileImage, projects, achievements,github,linkedin,coding} = req.body;
 
   const prompt = generateHTML({
     name,
@@ -11,6 +11,10 @@ export const generatePortfolio = async (req, res) => {
     experience,
     profileImage,
     projects,
+    achievements,
+    github,
+    linkedin,
+    coding,
   });
 
   try {
@@ -26,6 +30,7 @@ export const generatePortfolio = async (req, res) => {
     );
 
     const data = await geminiRes.json();
+
     const htmlContent =
       data?.candidates?.[0]?.content?.parts?.[0]?.text ||
       "<h2>Failed to generate.</h2>";
@@ -33,14 +38,22 @@ export const generatePortfolio = async (req, res) => {
     const newPortfolio = new Portfolio({
       name,
       skills,
+      github,
+      linkedin,
+      coding,
       experience,
       profileImage,
       projects,
+      achievements,
+
       htmlContent,
     });
 
     await newPortfolio.save();
+
     res.json({ htmlContent });
+
+
   } catch (err) {
     console.error("Error generating portfolio:", err);
     res.status(500).json({ error: "Internal server error" });

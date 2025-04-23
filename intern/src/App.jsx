@@ -7,6 +7,10 @@ const PortfolioBuilder = () => {
     skills: "",
     experience: "",
     projects: "",
+    achievements:"",
+    github:"",
+    linkedin:"",
+    coding:"",
   });
 
   const [hide, setHide] = useState(false);
@@ -18,6 +22,7 @@ const PortfolioBuilder = () => {
     profileImage: false,
     skills: false,
     projects: false,
+  
   });
 
   const handleChange = (e) => {
@@ -46,7 +51,7 @@ const PortfolioBuilder = () => {
     setHide(true);
     try {
       const response = await fetch(
-        "https://cehpoint.onrender.com/api/portfolio/generate",
+        "http://localhost:5000/api/portfolio/generate",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -85,14 +90,44 @@ const PortfolioBuilder = () => {
               value={formData.name}
               onChange={handleChange}
             />
-            <input
+             <input
               type="text"
               name="profileImage"
-              placeholder="Your Image URL"
+              placeholder="Enter your photo url"
+              className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 ${
+                errors.name ? "border-red-500" : "border-gray-300"
+              }`}
+              value={formData.profileImage}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="github"
+              placeholder="Your github link"
               className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 ${
                 errors.profileImage ? "border-red-500" : "border-gray-300"
               }`}
-              value={formData.profileImage}
+              value={formData.github}
+              onChange={handleChange}
+            />
+             <input
+              type="text"
+              name="linkedin"
+              placeholder="Your linkedin URL"
+              className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 ${
+                errors.profileImage ? "border-red-500" : "border-gray-300"
+              }`}
+              value={formData.linkedin}
+              onChange={handleChange}
+            />
+             <input
+              type="text"
+              name="coding"
+              placeholder="Your coding profile url (if any)"
+              className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 ${
+                errors.profileImage ? "border-red-500" : "border-gray-300"
+              }`}
+              value={formData.coding}
               onChange={handleChange}
             />
             <textarea
@@ -115,12 +150,22 @@ const PortfolioBuilder = () => {
             />
             <textarea
               name="projects"
-              placeholder="Projects (title:desc, one per line)"
+              placeholder="Projects ((1st Project (title , Link)) , (2nd project (title , Link)).....)"
               rows={4}
               className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 md:col-span-2 ${
                 errors.projects ? "border-red-800" : "border-gray-300"
               }`}
               value={formData.projects}
+              onChange={handleChange}
+            />
+              <textarea
+              name="achievements"
+              placeholder=" achievements (coding profile, hackathons)"
+              rows={4}
+              className={`w-full border p-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 md:col-span-2 ${
+                errors.projects ? "border-red-800" : "border-gray-300"
+              }`}
+              value={formData.achievements}
               onChange={handleChange}
             />
           </div>
