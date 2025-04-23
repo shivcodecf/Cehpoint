@@ -46,7 +46,7 @@ const PortfolioBuilder = () => {
     setHide(true);
     try {
       const response = await fetch(
-        "http://localhost:5000/api/portfolio/generate",
+        "https://cehpoint.onrender.com/api/portfolio/generate",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
