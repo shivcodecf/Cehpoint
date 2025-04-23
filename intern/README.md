@@ -13,7 +13,12 @@ This is the **frontend** of the AI-Powered Portfolio Generator built with **Vite
 - Font Awesome (for skill icons)
 - Responsive design with Dark/Light mode
 
----
+--- 
+
+🙌  How to use 
+
+-- In Project Section u can fill the Project Title with Project Link separated by comma(,).
+e.g  Ecommerce Link , Job Portal LInk , etc
 
 ## 📦 Getting Started
 

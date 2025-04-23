@@ -13,10 +13,7 @@ This is the **backend** of the AI-Powered Portfolio Generator. It is built with 
 
 ---  
 
-🙌  How to use 
 
--- In Project Section u can fill the Project Title with Project Link separated by comma(,).
-e.g  Ecommerce Link , Job Portal LInk , etc
 
 
 
