@@ -8,7 +8,7 @@ An intelligent and customizable portfolio generator built with the **MERN stack*
 - 🎨 Real-time portfolio preview on the same page
 - ✍️ Supports user customization and updates
 - 💾 Save portfolios to MongoDB
-- 📤 Export or download the portfolio
+
 - 🪄 "Generate" button triggers AI generation via Gemini API
 - 📸 Option to include profile photo and social links
 
