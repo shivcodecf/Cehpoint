@@ -21,6 +21,8 @@ https://cehpoint-qrk2.vercel.app/
 _Add your screenshots or demo GIF here_
   ![image](https://github.com/user-attachments/assets/ce7f833c-1114-4504-8a37-a2ed3e653db1
 
+   ![image](https://github.com/user-attachments/assets/471d4c90-a52d-43f2-ab47-5272e54bfa00)
+
 ---
 
 ## ⚙️ Tech Stack
